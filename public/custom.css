@@ -1,0 +1,713 @@
+/* Override styles to ensure content displays properly in React */
+
+body {
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #000;
+}
+
+#root {
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* Ensure text is visible */
+
+* {
+    visibility: visible !important;
+}
+
+
+/* Ensure sections display properly */
+
+section {
+    display: block !important;
+    position: relative;
+    visibility: visible !important;
+}
+
+
+/* Make sure all text content is visible */
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a,
+div {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+
+/* Fix for owl carousel in React */
+
+.owl-carousel {
+    display: block;
+    position: relative;
+    visibility: visible !important;
+}
+
+.owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+}
+
+.owl-carousel .owl-stage {
+    position: relative;
+    -ms-touch-action: pan-Y;
+    touch-action: pan-Y;
+}
+
+.owl-carousel .owl-item {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+
+/* Ensure images load properly */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Fix for background images */
+
+.img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+/* Ensure navbar displays on top */
+
+.ftco_navbar {
+    position: relative;
+    z-index: 999;
+    visibility: visible !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #e0e0e0;
+}
+
+nav {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+@media (max-width: 767.98px) {
+    #ftco-navbar .navbar-collapse {
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+    }
+    .featured-projects-title {
+        margin-left: 14px;
+        display: inline-block;
+    }
+}
+
+
+/* Active navbar link styling - Blue */
+
+.navbar-nav .nav-link.active {
+    color: #297ce8 !important;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link.active::after {
+    content: '';
+    display: block;
+    background-color: #297ce8;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #297ce8 !important;
+}
+
+.ftco_navbar .navbar-nav a.nav-link {
+    color: #000 !important;
+}
+
+.ftco_navbar .navbar-nav a.nav-link.active {
+    color: #297ce8 !important;
+}
+
+
+/* Force display of content */
+
+.text,
+.heading-section,
+.subheading {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+
+/* Remove any hiding animations */
+
+.ftco-animate {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+
+/* Fix for hero slider images */
+
+.hero .slider-item {
+    min-height: 600px;
+    height: 100vh;
+}
+
+.hero .slider-item .img {
+    min-height: 600px;
+    height: 100%;
+    width: 100%;
+}
+
+.js-fullheight {
+    height: 100vh;
+}
+
+
+/* Ensure slider background images show */
+
+.slider-item .img {
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+}
+
+
+/* Fix owl carousel height */
+
+.home-slider .owl-stage-outer,
+.home-slider .owl-stage,
+.home-slider .owl-item {
+    height: 100vh;
+}
+
+.home-slider .slider-item {
+    height: 100vh;
+}
+
+
+/* Testimonials overrides: white background, blue cards */
+
+.testimony-section {
+    background: #fff !important;
+}
+
+.testimony-section .overlay {
+    display: none !important;
+}
+
+.testimony-section .heading-section-white,
+.testimony-section .heading-section-white h2,
+.testimony-section .heading-section-white .subheading,
+.testimony-section .heading-section-white p {
+    color: #000 !important;
+}
+
+.testimony-wrap .text {
+    background: #5fa9ff !important;
+    color: #fff !important;
+    box-shadow: 0 18px 32px -20px rgba(0, 0, 0, 0.25) !important;
+}
+
+.testimony-wrap p {
+    color: #fff !important;
+}
+
+.testimony-wrap .name {
+    color: #000000 !important;
+}
+
+.testimony-wrap .position {
+    color: rgba(218, 252, 255, 0.8) !important;
+}
+
+.testimony-section .owl-dots .owl-dot {
+    background: rgba(95, 169, 255, 0.35) !important;
+}
+
+.testimony-section .owl-dots .owl-dot.active {
+    background: #5fa9ff !important;
+}
+
+
+/* Static hero (no carousel): left text, right image */
+
+.hero-static {
+    position: relative;
+    padding: 5rem 0 4rem;
+}
+
+.hero-static .hero-copy {
+    max-width: 630px;
+    padding-left: 9rem;
+    margin-top: 0rem;
+    padding-top: 0rem;
+}
+
+.hero-static .hero-title {
+    font-size: 48px;
+    line-height: 1.15;
+    font-weight: 300;
+}
+
+.hero-static .hero-title span {
+    font-weight: 800;
+}
+
+.hero-static .hero-lead {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+    max-width: 580px;
+}
+
+.hero-static {
+    position: relative;
+    padding: 5rem 0 4rem;
+    overflow: hidden;
+}
+
+.hero-static .hero-image {
+    width: 100%;
+    min-height: 480px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0;
+    position: relative;
+    box-shadow: none;
+    margin-right: 0;
+}
+
+@media (min-width: 768px) {
+    .hero-static .col-md-6.pr-0 {
+        padding-right: 0 !important;
+    }
+}
+
+.hero-static .hero-image .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.02) 100%);
+}
+
+.hero-static .hero-image {
+    min-height: 320px;
+    margin-bottom: 1.5rem;
+}
+
+.hero-vert-label {
+    display: none;
+    border-radius: 8px;
+    transform-origin: left top;
+    letter-spacing: 5px;
+    font-size: 15px;
+    color: #9aa0a6e2;
+    text-transform: uppercase;
+    font-weight: 270;
+}
+
+.hero-vert-label.typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    border-right: 2px solid rgba(154, 160, 166, 0.9);
+    width: 0;
+    animation: typing-vert 2.2s steps(20, end) 0.1s forwards, caret-blink 0.75s step-end infinite;
+}
+
+@keyframes typing-vert {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes caret-blink {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: rgba(154, 160, 166, 0.9);
+    }
+}
+
+@media (max-width: 991.98px) {
+    .hero-static {
+        padding: 3.5rem 0 3rem;
+    }
+    .hero-static .hero-title {
+        font-size: 36px;
+    }
+    .hero-static .hero-copy {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        .project-info {
+            padding-left: 14px;
+            padding-right: 8px;
+        }
+    }
+    .hero-static .hero-image {
+        min-height: 320px;
+        margin-bottom: 1.5rem;
+    }
+    .hero-vert-label {
+        display: none;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero-static .hero-title {
+        font-size: 30px;
+    }
+    .hero-static .hero-lead {
+        font-size: 16px;
+    }
+    .hero-static {
+        padding: 3rem 0 2.5rem;
+    }
+    .hero-static .hero-copy {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        padding-top: 0.75rem;
+    }
+    .project-info {
+        padding: 14px;
+    }
+}
+
+
+/* Responsive hero slider */
+
+@media (max-width: 768px) {
+    .home-slider .owl-stage-outer,
+    .home-slider .owl-stage,
+    .home-slider .owl-item {
+        height: auto;
+        min-height: 600px;
+    }
+    .home-slider .slider-item {
+        height: auto;
+        min-height: 600px;
+    }
+    .hero .slider-item {
+        height: auto;
+        min-height: 600px;
+    }
+    .js-fullheight {
+        height: auto !important;
+        min-height: 600px;
+    }
+    .slider-text {
+        padding: 20px !important;
+    }
+}
+
+
+/* Make overlay much darker so text is readable */
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0) !important;
+    opacity: 0 !important;
+    z-index: 1;
+}
+
+
+/* Show overlay on mobile devices for better text readability */
+
+@media (max-width: 768px) {
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.7) !important;
+        opacity: 0.7 !important;
+    }
+}
+
+
+/* Ensure slider item images are visible */
+
+.slider-item {
+    position: relative;
+}
+
+.slider-item .img {
+    position: relative !important;
+    z-index: 0 !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+}
+
+.slider-item .img::before {
+    content: none !important;
+}
+
+
+/* Make sure text appears on top */
+
+.slider-text {
+    position: relative;
+    z-index: 2 !important;
+}
+
+
+/* Remove gaps between sections */
+
+section {
+    margin: 0 !important;
+    padding-top: 0 !important;
+}
+
+.hero {
+    margin: 0 !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+ftco-footer {
+    margin-top: 0 !important;
+}
+
+
+/* Remove white space */
+
+body>div {
+    display: flex;
+    flex-direction: column;
+}
+
+body>div>footer {
+    margin-top: auto;
+}
+
+
+/* Hero section responsive layout */
+
+.slider-text .text {
+    padding: 40px;
+}
+
+.one-third {
+    width: 33.333%;
+}
+
+.one-forth {
+    width: 25%;
+}
+
+@media (max-width: 992px) {
+    .one-third {
+        width: 50%;
+    }
+    .one-forth {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .one-third,
+    .one-forth {
+        width: 100%;
+        order: 1 !important;
+    }
+    .order-md-last {
+        order: 0 !important;
+    }
+    .slider-text .text {
+        padding: 20px;
+    }
+    .slider-text .text h1 {
+        font-size: 24px !important;
+    }
+    .slider-text .text p {
+        font-size: 14px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .slider-text .text {
+        padding: 15px;
+    }
+    .slider-text .text h1 {
+        font-size: 20px !important;
+    }
+    .slider-text .text span {
+        font-size: 12px !important;
+    }
+}
+
+
+/* Compact footer styling */
+
+.ftco-footer {
+    padding: 30px 0 20px 0 !important;
+}
+
+.ftco-footer .container {
+    padding-left: 15px !important;
+    padding-top: 20px !important;
+    padding-right: 15px !important;
+}
+
+.ftco-footer .row.mb-5 {
+    margin-bottom: 20px !important;
+}
+
+.ftco-footer-widget {
+    margin-bottom: 20px !important;
+}
+
+.ftco-footer-widget h2 {
+    margin-bottom: 15px !important;
+}
+
+.ftco-footer-widget p,
+.ftco-footer-widget ul li {
+    margin-bottom: 8px !important;
+}
+
+.ftco-footer-widget ul {
+    padding-left: 0 !important;
+}
+
+.ftco-footer-social {
+    margin-top: 15px !important;
+}
+
+.ftco-footer .row:last-child p {
+    margin: 0 !important;
+    padding: 15px 0 !important;
+}
+
+
+/* Hero statistics styling */
+
+.hero-stats {
+    background: rgba(41, 124, 232, 0.08);
+    padding: 20px 0;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 0;
+}
+
+.stat-number {
+    font-size: 32px;
+    font-weight: 800;
+    color: #297ce8;
+    margin: 0 0 4px 0;
+    padding: 0;
+    line-height: 0.9;
+}
+
+.stat-number span {
+    font-size: 24px;
+    margin-left: 2px;
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+}
+
+.stat-text {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    line-height: 1;
+}
+
+@media (max-width: 768px) {
+    .hero-stats {
+        padding: 15px;
+        margin-top: 15px;
+    }
+    .stat-number {
+        font-size: 24px;
+    }
+    .stat-text {
+        font-size: 12px;
+    }
+}
+
+
+/* Slide animations - AOS library custom styles */
+
+[data-aos="slide-up"] {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+[data-aos="slide-up"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[data-aos="slide-down"] {
+    opacity: 0;
+    transform: translateY(-40px);
+}
+
+[data-aos="slide-down"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[data-aos="slide-left"] {
+    opacity: 0;
+    transform: translateX(-40px);
+}
+
+[data-aos="slide-left"].aos-animate {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[data-aos="slide-right"] {
+    opacity: 0;
+    transform: translateX(40px);
+}
+
+[data-aos="slide-right"].aos-animate {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
